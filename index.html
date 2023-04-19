@@ -16,7 +16,7 @@
                 // Loop through the posts and create links and sections for each one
                 for (let post of data.posts) {
                     // Create a link element
-                    let li = document.CreateElement("li");
+                    let li = document.createElement("li");
                     let link = document.createElement("a");
                     link.href = "#" + post.id;
                     link.textContent = post.title;
@@ -26,11 +26,11 @@
 
 
                     //create rowdiv element
-                    let rowDiv = document.creatElement(div);
+                    let rowDiv = document.createElement(div);
                     rowDiv.className = "row";
                     document.getElementById("posts").appendChild(rowDiv);
                     //create colDiv element
-                    let colDiv = document.creatElement(div);
+                    let colDiv = document.createElement(div);
                     colDiv.className = "col-md-10";
                     rowDiv.appendChild(colDiv)
                     // Create a section element
