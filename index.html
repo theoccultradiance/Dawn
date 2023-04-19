@@ -37,10 +37,14 @@
   
     /* Style the sections */
     section {
-      display: block; /* Hide by default */
+      display: none; /* Hide by default */
       border: 1px solid black; /* Add a border */
       margin-bottom: 20px; /* Add some space below */
     }
+
+    section:target {
+    display: block;
+  }
   </style>
 <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
 <script>
