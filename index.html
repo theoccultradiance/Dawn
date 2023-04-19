@@ -17,15 +17,17 @@
             .then(response => response.json())
             .then(data => {
                 // Loop through the posts and create links and sections for each one
+                // let ul = document.createElement("ul");
+                // ul.className = "nav nav"
                 for (let post of data.posts) {
                     // Create a link element
                     // let li = document.createElement("li");
-                    let link = document.createElement("a");
-                    link.href = "#" + post.id;
-                    link.textContent = post.title;
-                    // Append the link to the navigation div
+                    // let link = document.createElement("a");
+                    // link.href = "#" + post.id;
+                    // link.textContent = post.title;
+                    // // Append the link to the navigation div
                     // li.appendChild(link);
-                    document.getElementById("toc").appendChild(link);
+                    // document.getElementById("toc").appendChild(li);
 
 
                     //create rowdiv element
