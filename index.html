@@ -1,13 +1,47 @@
 <html>
 <head>
-<style>
-  section {
-    display: none;
-  }
-  section:target {
-    display: block;
-  }
-</style>
+  <style>
+    /* Style the navigation div */
+    #navigation {
+      background-color: #333; /* Dark gray background */
+      overflow: hidden; /* Clear floats */
+    }
+  
+    /* Style the navigation links */
+    #navigation a {
+      float: left; /* Align horizontally */
+      color: white; /* White text */
+      text-align: center; /* Centered text */
+      padding: 14px 16px; /* Some padding */
+      text-decoration: none; /* Remove underline */
+      font-size: 17px; /* Set font size */
+    }
+  
+    /* Change the color of links on hover */
+    #navigation a:hover {
+      background-color: #ddd; /* Light gray background */
+      color: black; /* Black text */
+    }
+  
+    /* Add a color to the active/current link */
+    #navigation a.active {
+      background-color: #4CAF50; /* Green background */
+      color: white; /* White text */
+    }
+  
+    /* Style the main div */
+    #main {
+      margin-left: 20px; /* Add some space on the left */
+      padding: 20px; /* Add some padding */
+    }
+  
+    /* Style the sections */
+    section {
+      display: none; /* Hide by default */
+      border: 1px solid black; /* Add a border */
+      margin-bottom: 20px; /* Add some space below */
+    }
+  </style>
 <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
 <script>
   // Get the list of posts from the directory
