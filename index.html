@@ -19,13 +19,13 @@
                 // Loop through the posts and create links and sections for each one
                 for (let post of data.posts) {
                     // Create a link element
-                    let li = document.createElement("li");
+                    // let li = document.createElement("li");
                     let link = document.createElement("a");
                     link.href = "#" + post.id;
                     link.textContent = post.title;
                     // Append the link to the navigation div
-                    li.appendChild(link);
-                    document.getElementById("toc").appendChild(li);
+                    // li.appendChild(link);
+                    document.getElementById("toc").appendChild(link);
 
 
                     //create rowdiv element
@@ -70,9 +70,13 @@
     <style>
         body {
             margin-top: 42px;
-            text-align: center;
+            text-align: left;
             background-color: black;
             color: beige;
+        }
+
+        h1 {
+            text-align: center;
         }
 
         nav[data-toggle="toc"] {
