@@ -41,34 +41,44 @@
                     colDiv.className = "col-md-10";
                     rowDiv.appendChild(colDiv)
                     // Create a section element
-                    let section = document.createElement("section");
-                    section.id = post.id;
-                    // Create a title element
+
+                    let posts = document.getElementById("posts");
+                    // let section = document.createElement("section");
+                    // section.id = post.id;
+                    // // Create a title element
                     let title = document.createElement("h1");
                     title.textContent = post.title;
-                    // Append the title to the section
-                    section.appendChild(title);
-                    // Create a content element
-                    let content = document.createElement("div");
-                    content.className = "content";
-                    // Append the content to the section
-                    section.appendChild(content);
-                    // Append the section to the main div
-                    colDiv.appendChild(section);
-                }
-                // Load the markdown files and render them using Showdown
-                let converter = new showdown.Converter();
-                let sections = document.querySelectorAll("section");
-                for (let section of sections) {
-                    let id = section.id;
-                    let contentDiv = section.querySelector(".content");
-                    fetch("./_posts/" + id + ".md")
+                    // // Append the title to the section
+                    // section.appendChild(title);
+                    // // Create a content element
+                    // let content = document.createElement("div");
+                    // content.className = "content";
+                    // // Append the content to the section
+                    // section.appendChild(content);
+                    // // Append the section to the main div
+                    // colDiv.appendChild(section);
+                    posts.appendChild(title);
+                    fetch("./_posts/" + post + ".md")
                         .then(response => response.text())
                         .then(text => {
                             let html = converter.makeHtml(text);
-                            contentDiv.innerHTML = html;
+                            posts.innerHTML = html;
                         });
+
                 }
+                // Load the markdown files and render them using Showdown
+                // let converter = new showdown.Converter();
+                // let sections = document.querySelectorAll("section");
+                // for (let section of sections) {
+                //     let id = section.id;
+                //     let contentDiv = section.querySelector(".content");
+                //     fetch("./_posts/" + id + ".md")
+                //         .then(response => response.text())
+                //         .then(text => {
+                //             let html = converter.makeHtml(text);
+                //             contentDiv.innerHTML = html;
+                //         });
+                // }
             });
     </script>
     <style>
