@@ -58,6 +58,7 @@
                     // // Append the section to the main div
                     // colDiv.appendChild(section);
                     posts.appendChild(title);
+                    let converter = new showdown.Converter();
                     fetch("./_posts/" + post + ".md")
                         .then(response => response.text())
                         .then(text => {
