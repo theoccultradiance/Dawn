@@ -59,7 +59,7 @@
                     // colDiv.appendChild(section);
                     posts.appendChild(title);
                     let converter = new showdown.Converter();
-                    fetch("./_posts/" + post + ".md")
+                    fetch("./_posts/" + post.id + ".md")
                         .then(response => response.text())
                         .then(text => {
                             let html = converter.makeHtml(text);
