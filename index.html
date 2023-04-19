@@ -63,7 +63,7 @@
                         .then(response => response.text())
                         .then(text => {
                             let html = converter.makeHtml(text);
-                            posts.innerHTML = html;
+                            posts.innerHTML += html;
                         });
 
                 }
