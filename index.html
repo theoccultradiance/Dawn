@@ -69,10 +69,30 @@
     </script>
     <style>
         body {
-            margin-top: 20px;
+            margin-top: 42px;
             text-align: center;
             background-color: black;
             color: beige;
+        }
+
+        nav[data-toggle="toc"] {
+            top: 42px;
+        }
+
+        /* small screens */
+        @media (max-width: 768px) {
+
+            /* override stickyness so that the navigation does not follow scrolling */
+            nav[data-toggle="toc"] {
+                margin-bottom: 42px;
+                position: static;
+            }
+
+            /* PICK ONE */
+            /* don't expand nested items, which pushes down the rest of the page when navigating */
+            nav[data-toggle="toc"] .nav .active .nav {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -80,11 +100,11 @@
 <body data-spy="scroll" data-target="#toc">
     <div class="container">
         <div class="row">
-            <div class="col-md-10">
+            <div class="col-sm-9">
                 <div class="container" id="posts">
                 </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-sm-3">
                 <nav id="toc" data-toggle="toc" class="sticky-top"></nav>
             </div>
         </div>
